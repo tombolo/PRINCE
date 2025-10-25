@@ -84,8 +84,11 @@ const GlobalLoading = () => {
 
     return (
         <div className='global-loading'>
-            {/* Logo Background with Reduced Opacity */}
-            <div className='logo-background'></div>
+            {/* Enhanced Logo Background */}
+            <div className='logo-background'>
+                <div className='logo-background-glow'></div>
+                <div className='logo-background-pulse'></div>
+            </div>
 
             {/* Grid background */}
             <div className='grid-background'>
@@ -169,7 +172,7 @@ const GlobalLoading = () => {
                 ))}
             </div>
 
-            {/* Main content */}
+            {/* Main Logo Container */}
             <motion.div
                 className='logo-container'
                 initial={{ opacity: 0, y: -20, scale: 0.9 }}
@@ -189,28 +192,61 @@ const GlobalLoading = () => {
                 <motion.div
                     className='logo-foreground'
                     animate={{
-                        opacity: [0.8, 1, 0.8],
-                        scale: [1, 1.05, 1],
+                        opacity: [0.9, 1, 0.9],
+                        scale: [1, 1.08, 1],
+                        rotate: [-1, 1, -1],
                     }}
                     transition={{
-                        duration: 3,
+                        duration: 4,
                         repeat: Infinity,
                         ease: "easeInOut",
                     }}
                 >
                     <img src={LOGO} alt='NILOTE Logo' className='logo' />
+                    <div className='logo-outer-glow'></div>
+                    <div className='logo-inner-glow'></div>
                 </motion.div>
+                
                 <motion.div
                     className='logo-glow'
                     animate={{
-                        opacity: [0.3, 0.6, 0.3],
-                        scale: [1, 1.1, 1],
+                        opacity: [0.4, 0.8, 0.4],
+                        scale: [1, 1.2, 1],
                     }}
                     transition={{
                         duration: 3,
                         repeat: Infinity,
                     }}
                 />
+                
+                <motion.div
+                    className='logo-particles'
+                    animate={{
+                        opacity: [0.3, 0.7, 0.3],
+                    }}
+                    transition={{
+                        duration: 2,
+                        repeat: Infinity,
+                    }}
+                >
+                    {Array.from({ length: 12 }).map((_, i) => (
+                        <motion.div
+                            key={i}
+                            className='logo-particle'
+                            animate={{
+                                scale: [0, 1, 0],
+                                opacity: [0, 0.8, 0],
+                                rotate: [0, 360],
+                            }}
+                            transition={{
+                                duration: 3 + Math.random() * 2,
+                                repeat: Infinity,
+                                delay: Math.random() * 2,
+                                ease: "easeInOut",
+                            }}
+                        />
+                    ))}
+                </motion.div>
             </motion.div>
 
             {/* Deriv Branding */}

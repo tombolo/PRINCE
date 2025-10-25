@@ -24,7 +24,7 @@
     backface-visibility: hidden;
     perspective: 1000px;
 
-    /* Logo Background with Reduced Opacity */
+    /* Enhanced Logo Background */
     .logo-background {
         position: absolute;
         top: 0;
@@ -32,33 +32,50 @@
         width: 100%;
         height: 100%;
         background-image: url('./Logo/NILOTE.png');
-        background-size: 60%;
+        background-size: 80%;
         background-position: center;
         background-repeat: no-repeat;
-        opacity: 0.08;
-        animation: logo-float 20s ease-in-out infinite;
-        filter: blur(1px) grayscale(0.3);
+        opacity: 0.15;
+        animation: logo-float 25s ease-in-out infinite;
+        filter: blur(0.5px) grayscale(0.1) brightness(1.2);
         z-index: 0;
         
         @media (min-width: 768px) {
-            background-size: 40%;
-            opacity: 0.1;
+            background-size: 60%;
+            opacity: 0.18;
         }
         
         @media (min-width: 1200px) {
-            background-size: 30%;
-            opacity: 0.12;
+            background-size: 50%;
+            opacity: 0.2;
         }
         
-        &::before {
-            content: '';
+        .logo-background-glow {
             position: absolute;
-            top: 0;
-            left: 0;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
             width: 100%;
             height: 100%;
-            background: radial-gradient(circle at center, transparent 40%, rgba(11, 11, 18, 0.8) 80%);
-            animation: logo-glow-pulse 8s ease-in-out infinite;
+            background: radial-gradient(circle at center, rgba(34, 197, 94, 0.1) 0%, transparent 60%);
+            animation: background-glow-pulse 8s ease-in-out infinite;
+        }
+        
+        .logo-background-pulse {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            height: 80%;
+            border: 2px solid rgba(245, 158, 11, 0.1);
+            border-radius: 20%;
+            animation: background-pulse 12s ease-in-out infinite;
+            
+            @media (min-width: 768px) {
+                width: 60%;
+                height: 60%;
+            }
         }
     }
 
@@ -179,46 +196,115 @@
         }
     }
 
-    /* Logo styling */
+    /* Enhanced Logo styling */
     .logo-container {
         position: relative;
-        margin-bottom: 15px;
+        margin-bottom: 20px;
         z-index: 3;
         
         @media (min-width: 480px) {
-            margin-bottom: 20px;
+            margin-bottom: 30px;
         }
         
         @media (min-width: 768px) {
-            margin-bottom: 30px;
+            margin-bottom: 40px;
         }
         
         .logo-foreground {
             position: relative;
-            z-index: 3;
-            filter: drop-shadow(0 0 20px rgba(34, 197, 94, 0.6)) 
-                    drop-shadow(0 0 40px rgba(245, 158, 11, 0.4));
+            z-index: 4;
+            filter: 
+                drop-shadow(0 0 30px rgba(34, 197, 94, 0.8)) 
+                drop-shadow(0 0 60px rgba(245, 158, 11, 0.6))
+                drop-shadow(0 0 100px rgba(34, 197, 94, 0.4));
             
             .logo {
-                width: 60px;
+                width: 100px;
                 height: auto;
                 position: relative;
-                z-index: 3;
+                z-index: 5;
+                border-radius: 15px;
                 
                 @media (min-width: 360px) {
-                    width: 70px;
-                }
-                
-                @media (min-width: 480px) {
-                    width: 90px;
-                }
-                
-                @media (min-width: 768px) {
                     width: 120px;
                 }
                 
+                @media (min-width: 480px) {
+                    width: 150px;
+                }
+                
+                @media (min-width: 768px) {
+                    width: 200px;
+                }
+                
                 @media (min-width: 1200px) {
+                    width: 250px;
+                }
+            }
+            
+            .logo-outer-glow {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 120px;
+                height: 120px;
+                background: radial-gradient(circle, rgba(245, 158, 11, 0.3) 0%, transparent 70%);
+                border-radius: 50%;
+                z-index: 4;
+                animation: outer-glow-pulse 3s ease-in-out infinite;
+                
+                @media (min-width: 360px) {
                     width: 140px;
+                    height: 140px;
+                }
+                
+                @media (min-width: 480px) {
+                    width: 180px;
+                    height: 180px;
+                }
+                
+                @media (min-width: 768px) {
+                    width: 240px;
+                    height: 240px;
+                }
+                
+                @media (min-width: 1200px) {
+                    width: 300px;
+                    height: 300px;
+                }
+            }
+            
+            .logo-inner-glow {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 90px;
+                height: 90px;
+                background: radial-gradient(circle, rgba(34, 197, 94, 0.4) 0%, transparent 70%);
+                border-radius: 50%;
+                z-index: 3;
+                animation: inner-glow-pulse 2s ease-in-out infinite;
+                
+                @media (min-width: 360px) {
+                    width: 110px;
+                    height: 110px;
+                }
+                
+                @media (min-width: 480px) {
+                    width: 140px;
+                    height: 140px;
+                }
+                
+                @media (min-width: 768px) {
+                    width: 190px;
+                    height: 190px;
+                }
+                
+                @media (min-width: 1200px) {
+                    width: 240px;
+                    height: 240px;
                 }
             }
         }
@@ -228,31 +314,109 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 80px;
-            height: 80px;
-            background: radial-gradient(circle, rgba(245, 158, 11, 0.35) 0%, transparent 70%);
+            width: 120px;
+            height: 120px;
+            background: radial-gradient(circle, rgba(245, 158, 11, 0.4) 0%, transparent 70%);
             border-radius: 50%;
             z-index: 2;
             animation: energy-pulse 3s ease-in-out infinite;
             
             @media (min-width: 360px) {
-                width: 90px;
-                height: 90px;
+                width: 150px;
+                height: 150px;
             }
             
             @media (min-width: 480px) {
-                width: 110px;
-                height: 110px;
+                width: 190px;
+                height: 190px;
             }
             
             @media (min-width: 768px) {
-                width: 140px;
-                height: 140px;
+                width: 250px;
+                height: 250px;
             }
             
             @media (min-width: 1200px) {
-                width: 160px;
-                height: 160px;
+                width: 320px;
+                height: 320px;
+            }
+        }
+        
+        .logo-particles {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 150px;
+            height: 150px;
+            z-index: 1;
+            
+            @media (min-width: 480px) {
+                width: 200px;
+                height: 200px;
+            }
+            
+            @media (min-width: 768px) {
+                width: 280px;
+                height: 280px;
+            }
+            
+            .logo-particle {
+                position: absolute;
+                width: 4px;
+                height: 4px;
+                background: rgba(34, 197, 94, 0.8);
+                border-radius: 50%;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                
+                &:nth-child(1) { transform: translate(-50%, -50%) rotate(0deg) translateX(60px); }
+                &:nth-child(2) { transform: translate(-50%, -50%) rotate(30deg) translateX(60px); }
+                &:nth-child(3) { transform: translate(-50%, -50%) rotate(60deg) translateX(60px); }
+                &:nth-child(4) { transform: translate(-50%, -50%) rotate(90deg) translateX(60px); }
+                &:nth-child(5) { transform: translate(-50%, -50%) rotate(120deg) translateX(60px); }
+                &:nth-child(6) { transform: translate(-50%, -50%) rotate(150deg) translateX(60px); }
+                &:nth-child(7) { transform: translate(-50%, -50%) rotate(180deg) translateX(60px); }
+                &:nth-child(8) { transform: translate(-50%, -50%) rotate(210deg) translateX(60px); }
+                &:nth-child(9) { transform: translate(-50%, -50%) rotate(240deg) translateX(60px); }
+                &:nth-child(10) { transform: translate(-50%, -50%) rotate(270deg) translateX(60px); }
+                &:nth-child(11) { transform: translate(-50%, -50%) rotate(300deg) translateX(60px); }
+                &:nth-child(12) { transform: translate(-50%, -50%) rotate(330deg) translateX(60px); }
+                
+                @media (min-width: 480px) {
+                    width: 5px;
+                    height: 5px;
+                    &:nth-child(1) { transform: translate(-50%, -50%) rotate(0deg) translateX(80px); }
+                    &:nth-child(2) { transform: translate(-50%, -50%) rotate(30deg) translateX(80px); }
+                    &:nth-child(3) { transform: translate(-50%, -50%) rotate(60deg) translateX(80px); }
+                    &:nth-child(4) { transform: translate(-50%, -50%) rotate(90deg) translateX(80px); }
+                    &:nth-child(5) { transform: translate(-50%, -50%) rotate(120deg) translateX(80px); }
+                    &:nth-child(6) { transform: translate(-50%, -50%) rotate(150deg) translateX(80px); }
+                    &:nth-child(7) { transform: translate(-50%, -50%) rotate(180deg) translateX(80px); }
+                    &:nth-child(8) { transform: translate(-50%, -50%) rotate(210deg) translateX(80px); }
+                    &:nth-child(9) { transform: translate(-50%, -50%) rotate(240deg) translateX(80px); }
+                    &:nth-child(10) { transform: translate(-50%, -50%) rotate(270deg) translateX(80px); }
+                    &:nth-child(11) { transform: translate(-50%, -50%) rotate(300deg) translateX(80px); }
+                    &:nth-child(12) { transform: translate(-50%, -50%) rotate(330deg) translateX(80px); }
+                }
+                
+                @media (min-width: 768px) {
+                    width: 6px;
+                    height: 6px;
+                    &:nth-child(1) { transform: translate(-50%, -50%) rotate(0deg) translateX(110px); }
+                    &:nth-child(2) { transform: translate(-50%, -50%) rotate(30deg) translateX(110px); }
+                    &:nth-child(3) { transform: translate(-50%, -50%) rotate(60deg) translateX(110px); }
+                    &:nth-child(4) { transform: translate(-50%, -50%) rotate(90deg) translateX(110px); }
+                    &:nth-child(5) { transform: translate(-50%, -50%) rotate(120deg) translateX(110px); }
+                    &:nth-child(6) { transform: translate(-50%, -50%) rotate(150deg) translateX(110px); }
+                    &:nth-child(7) { transform: translate(-50%, -50%) rotate(180deg) translateX(110px); }
+                    &:nth-child(8) { transform: translate(-50%, -50%) rotate(210deg) translateX(110px); }
+                    &:nth-child(9) { transform: translate(-50%, -50%) rotate(240deg) translateX(110px); }
+                    &:nth-child(10) { transform: translate(-50%, -50%) rotate(270deg) translateX(110px); }
+                    &:nth-child(11) { transform: translate(-50%, -50%) rotate(300deg) translateX(110px); }
+                    &:nth-child(12) { transform: translate(-50%, -50%) rotate(330deg) translateX(110px); }
+                }
             }
         }
     }
@@ -1067,25 +1231,58 @@
 @keyframes logo-float {
     0%, 100% { 
         transform: translateX(0px) translateY(0px) scale(1) rotate(0deg);
-        opacity: 0.08;
+        opacity: 0.15;
     }
     25% { 
-        transform: translateX(-10px) translateY(-5px) scale(1.02) rotate(0.5deg);
-        opacity: 0.1;
+        transform: translateX(-15px) translateY(-8px) scale(1.02) rotate(0.5deg);
+        opacity: 0.18;
     }
     50% { 
-        transform: translateX(5px) translateY(10px) scale(1.01) rotate(-0.3deg);
-        opacity: 0.09;
+        transform: translateX(8px) translateY(12px) scale(1.01) rotate(-0.3deg);
+        opacity: 0.16;
     }
     75% { 
-        transform: translateX(8px) translateY(-8px) scale(1.03) rotate(0.2deg);
-        opacity: 0.11;
+        transform: translateX(12px) translateY(-10px) scale(1.03) rotate(0.2deg);
+        opacity: 0.19;
     }
 }
 
-@keyframes logo-glow-pulse {
+@keyframes background-glow-pulse {
     0%, 100% { opacity: 0.3; }
-    50% { opacity: 0.6; }
+    50% { opacity: 0.7; }
+}
+
+@keyframes background-pulse {
+    0%, 100% { 
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.1;
+    }
+    50% { 
+        transform: translate(-50%, -50%) scale(1.1);
+        opacity: 0.3;
+    }
+}
+
+@keyframes outer-glow-pulse {
+    0%, 100% { 
+        opacity: 0.3;
+        transform: translate(-50%, -50%) scale(1);
+    }
+    50% { 
+        opacity: 0.6;
+        transform: translate(-50%, -50%) scale(1.1);
+    }
+}
+
+@keyframes inner-glow-pulse {
+    0%, 100% { 
+        opacity: 0.4;
+        transform: translate(-50%, -50%) scale(1);
+    }
+    50% { 
+        opacity: 0.8;
+        transform: translate(-50%, -50%) scale(1.05);
+    }
 }
 
 @keyframes grid-pulse {
@@ -1170,18 +1367,28 @@
         padding: 8px;
         
         .logo-background {
-            background-size: 70%;
-            opacity: 0.06;
+            background-size: 90%;
+            opacity: 0.12;
         }
         
         .logo-container {
             .logo-foreground .logo {
-                width: 50px;
+                width: 80px;
+            }
+            
+            .logo-foreground .logo-outer-glow {
+                width: 100px;
+                height: 100px;
+            }
+            
+            .logo-foreground .logo-inner-glow {
+                width: 70px;
+                height: 70px;
             }
             
             .logo-glow {
-                width: 70px;
-                height: 70px;
+                width: 100px;
+                height: 100px;
             }
         }
 
