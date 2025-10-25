@@ -32,13 +32,13 @@ const getBlockly = () => {
 const STATIC_BOTS = {
     auto_robot: {
         id: 'auto_robot',
-        name: 'BRAM EVEN ODD PRINTER',
+        name: 'EVEN ODD PRINTER',
         xml: AutoRobot,
         timestamp: Date.now(),
         save_type: save_types.LOCAL,
     },
     over_under: {
-        id: 'over_under_bot_by_GLE',
+        id: 'over_under_bot',
         name: 'Deriv wizard',
         xml: OverUnderBot,
         timestamp: Date.now(),
@@ -53,21 +53,21 @@ const STATIC_BOTS = {
     },
     dollar_flipper: {
         id: 'dollar_flipper',
-        name: 'master G8 OVER UNDER BY STATE FX VERSION 1 2026.',
+        name: 'master G8 OVER UNDER VERSION 1 2026.',
         xml: Derivflipper,
         timestamp: Date.now(),
         save_type: save_types.LOCAL,
     },
     printer: {
         id: 'printer',
-        name: 'Over Destroyer by state fx',
+        name: 'Over Destroyer',
         xml: Printer,
         timestamp: Date.now(),
         save_type: save_types.LOCAL,
     },
     under8: {
         id: 'under8',
-        name: 'STATES Digit Switcher V2',
+        name: 'Digit Switcher V2',
         xml: Under8,
         timestamp: Date.now(),
         save_type: save_types.LOCAL,
@@ -123,7 +123,7 @@ const STATIC_BOTS = {
     },
     expert_speed_bot_cdp_fx: {
         id: 'expert_speed_bot_cdp_fx',
-        name: 'Expert Speed Bot by CHOSEN DOLLAR PRINTER Fx',
+        name: 'Expert Speed Bot',
         xml: ExpertSpeedBotByCHOSENDOLLARPRINTERFx,
         timestamp: Date.now(),
         save_type: save_types.LOCAL,
