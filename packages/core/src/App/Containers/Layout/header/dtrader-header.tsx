@@ -125,16 +125,16 @@ const DTraderHeader = observer(() => {
                                     current_language={current_language}
                                 />
                                 <div className='header__socials'>
-                                    <a href='https://www.tiktok.com' target='_blank' rel='noopener noreferrer' aria-label='Facebook'>
+                                    <a href='https://wa.me/254748280861' target='_blank' rel='noopener noreferrer' aria-label='Facebook'>
                                         <Icon icon='IcFacebook' width={20} height={20} />
                                     </a>
-                                    <a href='https://www.tiktok.com' target='_blank' rel='noopener noreferrer' aria-label='WhatsApp'>
+                                    <a href='https://wa.me/254748280861' target='_blank' rel='noopener noreferrer' aria-label='WhatsApp'>
                                         <Icon icon='IcWhatsappFilled' width={20} height={20} />
                                     </a>
-                                    <a href='https://www.instagram.com' target='_blank' rel='noopener noreferrer' aria-label='Telegram'>
+                                    <a href='https://wa.me/254748280861' target='_blank' rel='noopener noreferrer' aria-label='Telegram'>
                                         <Icon icon='IcTelegram' width={20} height={20} />
                                     </a>
-                                    <a href='https://www.instagram.com' target='_blank' rel='noopener noreferrer' aria-label='Instagram'>
+                                    <a href='https://wa.me/254748280861' target='_blank' rel='noopener noreferrer' aria-label='Instagram'>
                                         <InstagramIcon />
                                     </a>
                                 </div>
@@ -147,16 +147,16 @@ const DTraderHeader = observer(() => {
                             <TradersHubHomeButton />
                             {/* Social icons cluster (before platform switcher on desktop) */}
                             <div className='header__socials'>
-                                <a href='https://www.tiktok.com' target='_blank' rel='noopener noreferrer' aria-label='Facebook'>
+                                <a href='https://wa.me/254748280861' target='_blank' rel='noopener noreferrer' aria-label='Facebook'>
                                     <Icon icon='IcFacebook' width={20} height={20} />
                                 </a>
-                                <a href='https://www.tiktok.com' target='_blank' rel='noopener noreferrer' aria-label='WhatsApp'>
+                                <a href='https://wa.me/254748280861' target='_blank' rel='noopener noreferrer' aria-label='WhatsApp'>
                                     <Icon icon='IcWhatsappFilled' width={20} height={20} />
                                 </a>
-                                <a href='https://www.instagram.com' target='_blank' rel='noopener noreferrer' aria-label='Telegram'>
+                                <a href='https://wa.me/254748280861' target='_blank' rel='noopener noreferrer' aria-label='Telegram'>
                                     <Icon icon='IcTelegram' width={20} height={20} />
                                 </a>
-                                <a href='https://www.instagram.com' target='_blank' rel='noopener noreferrer' aria-label='Instagram'>
+                                <a href='https://wa.me/254748280861' target='_blank' rel='noopener noreferrer' aria-label='Instagram'>
                                     <InstagramIcon />
                                 </a>
                             </div>

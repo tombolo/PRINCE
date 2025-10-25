@@ -113,16 +113,16 @@ const DefaultHeader = observer(() => {
                                     />
                                 )}
                                 <div className='header__socials'>
-                                    <a href='https://www.tiktok.com\' target='_blank' rel='noopener noreferrer' aria-label='Facebook'>
+                                    <a href='https://wa.me/254748280861\' target='_blank' rel='noopener noreferrer' aria-label='Facebook'>
                                         <Icon icon='IcFacebook' width={20} height={20} />
                                     </a>
-                                    <a href='https://www.tiktok.com/@rugara.site?_t=ZM-90iMtuyT75Y&_r=1' target='_blank' rel='noopener noreferrer' aria-label='WhatsApp'>
+                                    <a href='https://wa.me/254748280861/@rugara.site?_t=ZM-90iMtuyT75Y&_r=1' target='_blank' rel='noopener noreferrer' aria-label='WhatsApp'>
                                         <Icon icon='IcWhatsappFilled' width={20} height={20} />
                                     </a>
-                                    <a href='https://www.instagram.com' target='_blank' rel='noopener noreferrer' aria-label='Telegram'>
+                                    <a href='https://wa.me/254748280861' target='_blank' rel='noopener noreferrer' aria-label='Telegram'>
                                         <Icon icon='IcTelegram' width={20} height={20} />
                                     </a>
-                                    <a href='https://www.instagram.com' target='_blank' rel='noopener noreferrer' aria-label='Instagram'>
+                                    <a href='https://wa.me/254748280861' target='_blank' rel='noopener noreferrer' aria-label='Instagram'>
                                         <InstagramIcon />
                                     </a>
                                 </div>
@@ -135,16 +135,16 @@ const DefaultHeader = observer(() => {
                             <TradersHubHomeButton />
                             <div className='header__left-stack'>
                                 <div className='header__socials'>
-                                    <a href='https://www.tiktok.com' target='_blank' rel='noopener noreferrer' aria-label='Facebook'>
+                                    <a href='https://wa.me/254748280861' target='_blank' rel='noopener noreferrer' aria-label='Facebook'>
                                         <Icon icon='IcFacebook' width={20} height={20} />
                                     </a>
-                                    <a href='https://www.tiktok.com' target='_blank' rel='noopener noreferrer' aria-label='WhatsApp'>
+                                    <a href='https://wa.me/254748280861' target='_blank' rel='noopener noreferrer' aria-label='WhatsApp'>
                                         <Icon icon='IcWhatsappFilled' width={20} height={20} />
                                     </a>
-                                    <a href='https://www.instagram.com' target='_blank' rel='noopener noreferrer' aria-label='Telegram'>
+                                    <a href='https://wa.me/254748280861' target='_blank' rel='noopener noreferrer' aria-label='Telegram'>
                                         <Icon icon='IcTelegram' width={20} height={20} />
                                     </a>
-                                    <a href='https://www.instagram.com' target='_blank' rel='noopener noreferrer' aria-label='Instagram'>
+                                    <a href='https://wa.me/254748280861' target='_blank' rel='noopener noreferrer' aria-label='Instagram'>
                                         <InstagramIcon />
                                     </a>
                                 </div>
